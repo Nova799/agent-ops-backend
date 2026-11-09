@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  backend:
+    build: .
+    ports:
+      - "8001:8001"
+    environment:
+      AGENT_OPS_API_KEY: ${AGENT_OPS_API_KEY:-change-me}
+      AGENT_OPS_JWT_SECRET: ${AGENT_OPS_JWT_SECRET:-change-me-in-production-please-use-a-long-secret-key}
+      AGENT_OPS_DATABASE_URL: sqlite:////data/agent_ops.db
+      AGENT_OPS_CORS: ${AGENT_OPS_CORS:-*}
+      AGENT_OPS_RETENTION_DAYS: ${AGENT_OPS_RETENTION_DAYS:-30}
+    volumes:
+      - agentops_data:/data
+    restart: unless-stopped
+volumes:
+  agentops_data:
