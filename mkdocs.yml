@@ -1,0 +1,7 @@
+site_name: AgentOps Backend
+nav:
+  - Home: index.md
+  - Quickstart: quickstart.md
+  - API: api.md
+theme:
+  name: material
