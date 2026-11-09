@@ -4,3 +4,4 @@ __pycache__/
 .pytest_cache/
 .env
 alembic/versions/__pycache__/
+.vercel

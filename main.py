@@ -13,7 +13,7 @@ try:
     from .config import CORS_ORIGINS, RATE_LIMIT_PER_MIN, RETENTION_DAYS
     from .database import SessionLocal, init_db
 except ImportError:
-    from config import CORS_ORIGINS, RETENTION_DAYS
+    from config import CORS_ORIGINS, RATE_LIMIT_PER_MIN, RETENTION_DAYS
     from database import SessionLocal, init_db
 try:
     from .routers.auth import router as auth_router
